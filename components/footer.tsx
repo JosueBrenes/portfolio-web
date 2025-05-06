@@ -4,19 +4,19 @@ import { Github, Twitter, Linkedin, Mail } from "lucide-react"
 export default function Footer() {
   return (
     <footer className="border-t border-white/10">
-      <div className="container py-8">
+      <div className="container py-6 md:py-8 px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground mb-4 md:mb-0">
+          <p className="text-xs md:text-sm text-muted-foreground mb-4 md:mb-0">
             © {new Date().getFullYear()} JosueBrenes.dev. All rights reserved.
           </p>
-          <div className="flex space-x-6">
+          <div className="flex space-x-4 md:space-x-6">
             <Link
               href="https://github.com/JosueBrenes"
               target="_blank"
               rel="noreferrer"
               className="text-muted-foreground transition-colors hover:text-primary"
             >
-              <Github className="h-5 w-5" />
+              <Github className="h-4 w-4 md:h-5 md:w-5" />
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
@@ -25,7 +25,7 @@ export default function Footer() {
               rel="noreferrer"
               className="text-muted-foreground transition-colors hover:text-primary"
             >
-              <Twitter className="h-5 w-5" />
+              <Twitter className="h-4 w-4 md:h-5 md:w-5" />
               <span className="sr-only">Twitter</span>
             </Link>
             <Link
@@ -34,14 +34,14 @@ export default function Footer() {
               rel="noreferrer"
               className="text-muted-foreground transition-colors hover:text-primary"
             >
-              <Linkedin className="h-5 w-5" />
+              <Linkedin className="h-4 w-4 md:h-5 md:w-5" />
               <span className="sr-only">LinkedIn</span>
             </Link>
             <Link
               href="mailto:josuebrenes3005@gmail.com"
               className="text-muted-foreground transition-colors hover:text-primary"
             >
-              <Mail className="h-5 w-5" />
+              <Mail className="h-4 w-4 md:h-5 md:w-5" />
               <span className="sr-only">Email</span>
             </Link>
           </div>

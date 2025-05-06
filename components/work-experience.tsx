@@ -21,26 +21,29 @@ const experiences = [
 
 export default function WorkExperience() {
   return (
-    <section className="py-20">
-      <div className="container max-w-screen-xl mx-auto">
-        <h2 className="text-4xl font-bold text-center mb-16">Work Experience</h2>
-        <div className="space-y-12">
+    <section className="py-16 md:py-20">
+      <div className="container max-w-screen-xl mx-auto px-4">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16">Work Experience</h2>
+        <div className="space-y-8 md:space-y-12">
           {experiences.map((exp, index) => (
-            <div key={index} className="border border-white/10 rounded-lg p-6 bg-black/20">
+            <div key={index} className="border border-white/10 rounded-lg p-4 md:p-6 bg-black/20">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold">{exp.title}</h3>
-                  <p className="text-lg text-muted-foreground">{exp.company}</p>
+                  <h3 className="text-xl md:text-2xl font-bold">{exp.title}</h3>
+                  <p className="text-base md:text-lg text-muted-foreground">{exp.company}</p>
                 </div>
                 <div className="flex items-center mt-2 md:mt-0 text-muted-foreground">
                   <Calendar className="h-4 w-4 mr-2" />
                   <span>{exp.period}</span>
                 </div>
               </div>
-              <p className="mb-4 text-gray-300">{exp.description}</p>
+              <p className="mb-4 text-gray-300 text-sm md:text-base">{exp.description}</p>
               <div className="flex flex-wrap gap-2">
                 {exp.skills.map((skill, skillIndex) => (
-                  <span key={skillIndex} className="px-3 py-1 bg-gray-800 text-gray-200 text-sm rounded-md">
+                  <span
+                    key={skillIndex}
+                    className="px-2 py-1 md:px-3 md:py-1 bg-gray-800 text-gray-200 text-xs md:text-sm rounded-md"
+                  >
                     {skill}
                   </span>
                 ))}
