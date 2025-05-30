@@ -1,5 +1,11 @@
-import { Trophy, Calendar, GamepadIcon, ExternalLink } from "lucide-react"
-import Link from "next/link"
+import {
+  Trophy,
+  Calendar,
+  GamepadIcon,
+  ExternalLink,
+  Medal,
+} from "lucide-react";
+import Link from "next/link";
 
 const achievements = [
   {
@@ -21,6 +27,28 @@ const achievements = [
     icon: Trophy,
   },
   {
+    type: "Top 10",
+    title: "Starknet Reignite Hackathon",
+    date: "May 2025",
+    description:
+      "Participated with Aqua Stark, a next-generation Web3 aquarium simulation game built on Starknet. The game allows players to collect, breed, and trade fish NFTs, decorate aquariums, and engage in unique events, combining fun gameplay with true blockchain asset ownership.",
+    links: [
+      {
+        label: "View Project Details",
+        url: "https://aqua-stark.gitbook.io/aqua-stark",
+      },
+      {
+        label: "View Project Links",
+        url: "https://aqua-links.vercel.app/",
+      },
+      {
+        label: "Learn More",
+        url: "https://www.linkedin.com/feed/update/urn:li:activity:7334351258805297152/",
+      },
+    ],
+    icon: Medal,
+  },
+  {
     type: "Participant",
     title: "Dojo Game Jam - Spooky Edition",
     date: "November 2024",
@@ -29,16 +57,21 @@ const achievements = [
     links: [],
     icon: GamepadIcon,
   },
-]
+];
 
 export default function Achievements() {
   return (
     <section className="py-16 md:py-20">
       <div className="container max-w-screen-xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16">Achievements and Participations</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 md:mb-16">
+          Achievements and Participations
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {achievements.map((achievement, index) => (
-            <div key={index} className="border border-white/10 rounded-lg p-4 md:p-6 bg-black/20">
+            <div
+              key={index}
+              className="border border-white/10 rounded-lg p-4 md:p-6 bg-black/20"
+            >
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 gap-2">
                 <div className="flex items-center">
                   <span className="inline-flex items-center px-2 py-1 md:px-3 md:py-1 rounded-full text-xs md:text-sm font-medium bg-gray-800 text-white">
@@ -51,11 +84,17 @@ export default function Achievements() {
                   <span>{achievement.date}</span>
                 </div>
               </div>
-              <h3 className="text-lg md:text-xl font-bold mb-2">{achievement.title}</h3>
-              <p className="mb-4 text-gray-300 text-sm md:text-base">{achievement.description}</p>
+              <h3 className="text-lg md:text-xl font-bold mb-2">
+                {achievement.title}
+              </h3>
+              <p className="mb-4 text-gray-300 text-sm md:text-base">
+                {achievement.description}
+              </p>
               {achievement.links.length > 0 && (
                 <div>
-                  <p className="text-xs md:text-sm font-medium mb-2">Related Posts:</p>
+                  <p className="text-xs md:text-sm font-medium mb-2">
+                    Related Posts:
+                  </p>
                   <div className="flex flex-col space-y-2">
                     {achievement.links.map((link, linkIndex) => (
                       <Link
@@ -77,5 +116,5 @@ export default function Achievements() {
         </div>
       </div>
     </section>
-  )
+  );
 }
