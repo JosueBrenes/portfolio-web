@@ -57,6 +57,43 @@ const achievements = [
     links: [],
     icon: GamepadIcon,
   },
+  {
+    type: "Participant",
+    title: "Stellar Hacks by Blend Capital",
+    date: "July 2025",
+    description:
+      "Joined the virtual Stellar Hacks hackathon powered by Blend Capital, focused on building impactful blockchain applications using the Stellar network.",
+    links: [
+      {
+        label: "View Project Page",
+        url: "https://dorahacks.io/buidl/27455",
+      },
+    ],
+    icon: GamepadIcon,
+  },
+  {
+    type: "Participant",
+    title: "Stellar LATAM Hackathon",
+    date: "July 2025",
+    description:
+      "Participated in the Stellar LATAM Hackathon held in-person in México City and online. Contributed with the project 'StarProof', a decentralized credential verification system built on Soroban.",
+    links: [
+      {
+        label: "View Project Page",
+        url: "https://dorahacks.io/buidl/28433",
+      },
+    ],
+    icon: GamepadIcon,
+  },
+  {
+    type: "Participant",
+    title: "Reto Marte 2025",
+    date: "2025",
+    description:
+      "Participated in Reto Marte 2025 organized by Universidad Fidélitas. An international student innovation challenge focused on the exploration and colonization of Mars. Regional round held in Costa Rica, grand final in Spain.",
+    links: [],
+    icon: GamepadIcon,
+  },
 ];
 
 export default function Achievements() {
