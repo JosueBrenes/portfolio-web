@@ -90,7 +90,7 @@ const achievements = [
     title: "Reto Marte 2025",
     date: "2025",
     description:
-      "Participated in Reto Marte 2025 organized by Universidad Fidélitas. An international student innovation challenge focused on the exploration and colonization of Mars. Regional round held in Costa Rica, grand final in Spain.",
+      "Participated in Reto Marte 2025, an international innovation challenge organized by Universidad Fidélitas focused on space exploration and the colonization of Mars. Took part in the preliminary round held in Costa Rica, gaining valuable exposure to interdisciplinary student research and creativity.",
     links: [],
     icon: GamepadIcon,
   },
